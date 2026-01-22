@@ -1,107 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BridgeToCareer | India's Career Hub</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .brand span {
+            color: #ff7a18;
+        }
+
+        .top-btn {
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+        }
+
+        a.card-link {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-        <h1>>>>>>>>>>>>>>>></h1>
-        <p>Welcome to my portfolio, Full stack Engineer | Cloud Engineer | Technical Trainer</p>
-        <img src="C:\Users\himan\OneDrive\Pictures\Screenshots\Screenshot 2025-09-22 234558.png" alt="Image">
-    </header>
-    <hr>
-    <nav>
-        <a href="github.com">GITHUB</a> |
-        <a href="leetcode.com">Leetcode</a> |
-        <a href="linkedin.com">LinkedIn</a>
-    </nav>
-    <hr> 
-    <section>
-        <h2>Project</h2>
-        <article>
-            <h3>Hostel Management System  <a href="github.com">GITHUB</a></h3>
-            
-            <P>In this project users can perform all the hostel task</P>
-        </article>
-        <article>
-            <h3>URL Shortner  <a href="github.com">GITHUB</a></h3>
-            <p>Here users can short lin URLs into short </p>
-        </article>
-    </section>
-    <hr>
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>JAVA</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-    </section>
-    <hr>
-    <section>
-        <h3>Education</h3>
-        <table border="2">
-            <thead>
-                <tr>
-                    <th>Degree</th>
-                    <th>Speclization</th>
-                    <th>Passing Year</th>
-                    <th>Institute</th>
-                    <th>Grades</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Btech</td>
-                    <td>CSE</td>
-                    <td>2028</td>
-                    <td>CU</td>
-                    <TD>10</TD>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>12th</td>
-                    <td>Maths</td>
-                    <td>2024</td>
-                    <td>K.V.S</td>
-                    <TD>100%</TD>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td>10th</td>
-                    <td>Science</td>
-                    <td>2022</td>
-                    <td>K.V.S</td>
-                    <TD>100%</TD>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    <hr>
-    <section>
-        <form>
-            <h3>Contact me</h3>
-            <label for="name">Enter Your Name</label>
-            <input type="text" id="name" name="username" required placeholder="Enter Your Name" ><br><br>
 
-            <label for="em">Enter Your Email</label>
-            <input type="email" id="em" name="email" required placeholder="Enter Your Email"><br><br>
+<header class="header">
+    <div class="logo">Bridge<span>ToCareer</span></div>
 
-            <label for="reason">Reason of Contact</label>
-            <select id="reason">
-                <option value="">--Select an Option--</option>
-                <option value="Job">Job Opportunity</option>
-                <option value="Freelance">Freelance Work</option>
-                <option value="Training">Traning Work</option>
-        </form>
-        <label for="feedback">Enter Your Feedback</label>
-                <textarea id="feedback"></textarea><br><br>rf5
-    </section>
+    <div class="top-actions">
+        <a href="login.html"><button class="top-btn">Login</button></a>
+        <a href="signup.html"><button class="top-btn">Signup</button></a>
+    </div>
+</header>
+
+<nav class="nav">
+    <a href="#">Jobs</a>
+    <a href="#">Internships</a>
+    <a href="#">Companies</a>
+    <a href="#">Job News</a>
+</nav>
+
+<section class="hero">
+    <h1>Find Your Dream Job Faster 🚀</h1>
+    <p>Search across thousands of verified opportunities</p>
+
+    <div class="search-box">
+        <input type="text" placeholder="Job title">
+        <input type="text" placeholder="Location">
+        <button>Search</button>
+    </div>
+</section>
+
+<!-- JOBS -->
+<section class="section">
+    <h2>🔥 Latest Jobs</h2>
+
+    <div class="cards">
+
+        <div class="job-card">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+            <h3>Frontend Developer</h3>
+            <p>Company: StartupX</p>
+            <p>₹6–10 LPA · Remote</p>
+            <p><b>Closing Date:</b> 28 Feb 2026</p>
+            <a href="https://www.linkedin.com/jobs/" target="_blank">
+                <button>Apply</button>
+            </a>
+        </div>
+
+        <div class="job-card">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
+            <h3>Backend Engineer</h3>
+            <p>Company: Infosys</p>
+            <p>₹8–14 LPA · Bangalore</p>
+            <p><b>Closing Date:</b> 10 March 2026</p>
+            <a href="https://www.naukri.com/" target="_blank">
+                <button>Apply</button>
+            </a>
+        </div>
+
+        <div class="job-card">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+            <h3>UI/UX Designer</h3>
+            <p>Company: DesignPro</p>
+            <p>₹5–9 LPA · Remote</p>
+            <p><b>Closing Date:</b> 5 April 2026</p>
+            <a href="https://www.glassdoor.co.in/Job/" target="_blank">
+                <button>Apply</button>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- INTERNSHIPS -->
+<section class="section alt">
+    <h2>🎓 Student Internships</h2>
+
+    <div class="cards">
+
+        <div class="job-card">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+            <h3>Web Dev Intern</h3>
+            <p>Stipend: ₹10k/month</p>
+            <p><b>Start:</b> 1 April 2026</p>
+            <p><b>End:</b> 30 June 2026</p>
+            <a href="https://internshala.com/" target="_blank">
+                <button>Apply</button>
+            </a>
+        </div>
+
+        <div class="job-card">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <h3>Data Analyst Intern</h3>
+            <p>Stipend: ₹15k/month</p>
+            <p><b>Start:</b> 15 March 2026</p>
+            <p><b>End:</b> 15 September 2026</p>
+            <a href="https://www.indeed.com/internships" target="_blank">
+                <button>Apply</button>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- NEWS -->
+<section class="section">
+    <h2>📰 Job Market News</h2>
+
+    <div class="cards">
+
+        <a href="https://www.tcs.com/careers" target="_blank" class="card-link">
+            <div class="job-card">
+                <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">
+                <h3>TCS Hiring 40,000 Freshers</h3>
+                <p>Mass hiring drive for 2026 batch across India.</p>
+            </div>
+        </a>
+
+        <a href="https://careers.google.com/students/" target="_blank" class="card-link">
+            <div class="job-card">
+                <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0">
+                <h3>Google Internship Open</h3>
+                <p>Summer Internship 2026 now accepting applications.</p>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 BridgeToCareer • All rights reserved.
+</footer>
+
 </body>
-</html><!-- change from cart branch -->
-<!-- change from cart branch   -->
+</html>

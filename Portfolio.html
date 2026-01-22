@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Himanshu Sharma | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6366f1, #22d3ee);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background: #020617;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #38bdf8;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #38bdf8;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #0ea5e9;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            color: gray;
+        }
+
+        button {
+            background: #38bdf8;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Himanshu Sharma</h1>
+        <p>Web Developer | Python Programmer | Tech Enthusiast</p>
+        <br>
+        <button onclick="alert('Thanks for visiting my portfolio!')">Say Hi 👋</button>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>
+                Hi! I'm Himanshu, a passionate developer who loves building web apps, 
+                Python tools, and learning new technologies. I'm focused on improving 
+                my skills and building real-world projects.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="card skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+            <span>Git & GitHub</span>
+            <span>C++</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="card">
+            <h3>🔹 Multifunctional Python Tool</h3>
+            <p>A tool with QR generator, IP lookup, password generator, port scanner, etc.</p>
+        </div>
+
+        <div class="card">
+            <h3>🔹 Diabetes Prediction ML Project</h3>
+            <p>Machine learning model to predict diabetes using Python.</p>
+        </div>
+
+        <div class="card">
+            <h3>🔹 SafeRoute Web App</h3>
+            <p>A safety-focused route suggestion web application.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="card">
+            <p>Email: himanshu@example.com</p>
+            <p>GitHub: github.com/yourusername</p>
+            <p>LinkedIn: linkedin.com/in/yourprofile</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Himanshu Sharma | Built with HTML & CSS
+    </footer>
+
+</body>
+</html>

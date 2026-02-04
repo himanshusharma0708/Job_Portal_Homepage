@@ -1,38 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>BridgeToCareer | India's Career Hub</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        .brand span {
-            color: #ff7a18;
-        }
-
-        .top-btn {
-            background: linear-gradient(to right, #ff512f, #dd2476);
-            border: none;
-            padding: 8px 16px;
-            border-radius: 20px;
-            color: white;
-            cursor: pointer;
-        }
-
-        a.card-link {
-            text-decoration: none;
-            color: inherit;
-        }
-    </style>
 </head>
 
 <body>
 
 <header class="header">
     <div class="logo">Bridge<span>ToCareer</span></div>
-
-    <div class="top-actions">
-        <a href="login.html"><button class="top-btn">Login</button></a>
-        <a href="signup.html"><button class="top-btn">Signup</button></a>
+    <div>
+        <button class="top-btn">Login</button>
+        <button class="top-btn">Signup</button>
     </div>
 </header>
 
@@ -45,52 +25,49 @@
 
 <section class="hero">
     <h1>Find Your Dream Job Faster 🚀</h1>
-    <p>Search across thousands of verified opportunities</p>
-
-    <div class="search-box">
-        <input type="text" placeholder="Job title">
-        <input type="text" placeholder="Location">
-        <button>Search</button>
-    </div>
+    <p>Search verified jobs, internships & latest market updates</p>
 </section>
 
 <!-- JOBS -->
 <section class="section">
     <h2>🔥 Latest Jobs</h2>
 
-    <div class="cards">
+    <select onchange="filterJobs(this.value)">
+        <option value="all">All Job Types</option>
+        <option value="web">Web Development</option>
+        <option value="python">Python</option>
+        <option value="aiml">AI / ML</option>
+        <option value="data">Data</option>
+    </select>
 
-        <div class="job-card">
+    <div class="cards" id="jobCards">
+
+        <div class="job-card" data-type="web">
             <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
             <h3>Frontend Developer</h3>
-            <p>Company: StartupX</p>
-            <p>₹6–10 LPA · Remote</p>
-            <p><b>Closing Date:</b> 28 Feb 2026</p>
-            <a href="https://www.linkedin.com/jobs/" target="_blank">
-                <button>Apply</button>
-            </a>
+            <p>TCS · Mumbai · ₹7–12 LPA</p>
+            <button onclick="openLink('https://www.tcs.com/careers')">Apply</button>
         </div>
 
-        <div class="job-card">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
-            <h3>Backend Engineer</h3>
-            <p>Company: Infosys</p>
-            <p>₹8–14 LPA · Bangalore</p>
-            <p><b>Closing Date:</b> 10 March 2026</p>
-            <a href="https://www.naukri.com/" target="_blank">
-                <button>Apply</button>
-            </a>
+        <div class="job-card" data-type="python">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <h3>Python Developer</h3>
+            <p>Infosys · Bangalore · ₹6–11 LPA</p>
+            <button onclick="openLink('https://www.infosys.com/careers.html')">Apply</button>
         </div>
 
-        <div class="job-card">
+        <div class="job-card" data-type="aiml">
+            <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0">
+            <h3>AI Engineer</h3>
+            <p>Google · Hyderabad · ₹15–25 LPA</p>
+            <button onclick="openLink('https://careers.google.com')">Apply</button>
+        </div>
+
+        <div class="job-card" data-type="data">
             <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
-            <h3>UI/UX Designer</h3>
-            <p>Company: DesignPro</p>
-            <p>₹5–9 LPA · Remote</p>
-            <p><b>Closing Date:</b> 5 April 2026</p>
-            <a href="https://www.glassdoor.co.in/Job/" target="_blank">
-                <button>Apply</button>
-            </a>
+            <h3>Data Analyst</h3>
+            <p>Deloitte · Gurgaon · ₹8–14 LPA</p>
+            <button onclick="openLink('https://jobs.deloitte.co.in')">Apply</button>
         </div>
 
     </div>
@@ -100,28 +77,34 @@
 <section class="section alt">
     <h2>🎓 Student Internships</h2>
 
-    <div class="cards">
+    <select onchange="filterInternships(this.value)">
+        <option value="all">All Internship Types</option>
+        <option value="web">Web Development</option>
+        <option value="python">Python</option>
+        <option value="aiml">AI / ML</option>
+    </select>
 
-        <div class="job-card">
+    <div class="cards" id="internshipCards">
+
+        <div class="job-card" data-type="web">
             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
             <h3>Web Dev Intern</h3>
-            <p>Stipend: ₹10k/month</p>
-            <p><b>Start:</b> 1 April 2026</p>
-            <p><b>End:</b> 30 June 2026</p>
-            <a href="https://internshala.com/" target="_blank">
-                <button>Apply</button>
-            </a>
+            <p>₹10k/month · Internshala</p>
+            <button onclick="openLink('https://internshala.com/internships')">Apply</button>
         </div>
 
-        <div class="job-card">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-            <h3>Data Analyst Intern</h3>
-            <p>Stipend: ₹15k/month</p>
-            <p><b>Start:</b> 15 March 2026</p>
-            <p><b>End:</b> 15 September 2026</p>
-            <a href="https://www.indeed.com/internships" target="_blank">
-                <button>Apply</button>
-            </a>
+        <div class="job-card" data-type="python">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4">
+            <h3>Python Intern</h3>
+            <p>₹12k/month · Infosys</p>
+            <button onclick="openLink('https://www.infosys.com/careers/internships.html')">Apply</button>
+        </div>
+
+        <div class="job-card" data-type="aiml">
+            <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">
+            <h3>AI / ML Intern</h3>
+            <p>₹20k/month · Microsoft</p>
+            <button onclick="openLink('https://careers.microsoft.com/students')">Apply</button>
         </div>
 
     </div>
@@ -129,32 +112,14 @@
 
 <!-- NEWS -->
 <section class="section">
-    <h2>📰 Job Market News</h2>
-
-    <div class="cards">
-
-        <a href="https://www.tcs.com/careers" target="_blank" class="card-link">
-            <div class="job-card">
-                <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">
-                <h3>TCS Hiring 40,000 Freshers</h3>
-                <p>Mass hiring drive for 2026 batch across India.</p>
-            </div>
-        </a>
-
-        <a href="https://careers.google.com/students/" target="_blank" class="card-link">
-            <div class="job-card">
-                <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0">
-                <h3>Google Internship Open</h3>
-                <p>Summer Internship 2026 now accepting applications.</p>
-            </div>
-        </a>
-
-    </div>
+    <h2>📰 Job & Internship Market News</h2>
+    <div class="cards" id="newsContainer"></div>
 </section>
 
 <footer>
-    © 2026 BridgeToCareer • All rights reserved.
+    © 2026 BridgeToCareer • All rights reserved
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

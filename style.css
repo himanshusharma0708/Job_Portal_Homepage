@@ -1,9 +1,11 @@
+/* ===== GLOBAL ===== */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f8f9ff;
 }
 
+/* ===== HEADER ===== */
 .header {
     display: flex;
     justify-content: space-between;
@@ -22,6 +24,17 @@ body {
     color: #ffd700;
 }
 
+.top-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* ===== NAV ===== */
 .nav {
     background: white;
     padding: 10px;
@@ -36,6 +49,7 @@ body {
     color: #333;
 }
 
+/* ===== HERO ===== */
 .hero {
     background: linear-gradient(135deg, #ff512f, #dd2476);
     color: white;
@@ -43,19 +57,7 @@ body {
     text-align: center;
 }
 
-.search-box input {
-    padding: 12px;
-    margin: 5px;
-    width: 200px;
-}
-
-.search-box button {
-    padding: 12px 20px;
-    background: black;
-    color: white;
-    border: none;
-}
-
+/* ===== SECTIONS ===== */
 .section {
     padding: 50px 30px;
     text-align: center;
@@ -65,13 +67,23 @@ body {
     background: #eef1ff;
 }
 
+/* ===== FILTER ===== */
+select {
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+/* ===== CARD GRID ===== */
 .cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
+    align-items: stretch; /* equal height */
 }
 
+/* ===== CARD ===== */
 .job-card {
     width: 260px;
     background: white;
@@ -79,36 +91,58 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .job-card:hover {
     transform: translateY(-10px);
 }
 
+/* ===== IMAGE ===== */
 .job-card img {
     width: 100%;
-    height: 150px;
+    height: 160px;
     object-fit: cover;
+    background: #e5e7eb;
 }
 
+/* ===== TITLE ===== */
 .job-card h3 {
     margin: 10px;
+    font-size: 16px;
+    line-height: 1.3;
+    min-height: 60px;
 }
 
+/* ===== DESCRIPTION ===== */
 .job-card p {
     margin: 5px 10px;
     color: #555;
+    font-size: 14px;
+    line-height: 1.4;
+    flex-grow: 1;
+
+    /* clamp text */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
+/* ===== BUTTON ===== */
 .job-card button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background: linear-gradient(to right, #667eea, #764ba2);
     color: white;
     border: none;
     cursor: pointer;
+    margin-top: auto;
+    border-radius: 0 0 18px 18px;
 }
 
+/* ===== FOOTER ===== */
 footer {
     background: #111827;
     color: white;
